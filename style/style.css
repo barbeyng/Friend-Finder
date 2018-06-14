@@ -28,3 +28,7 @@ a:visited {
 a:hover {
     color: #8B0B55;
 }
+
+#survey-button {
+    color: rgb(58, 58, 58);
+}
