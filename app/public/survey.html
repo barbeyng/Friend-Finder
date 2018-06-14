@@ -275,9 +275,10 @@
 </footer>
 
 <script type="text/javascript">
-
+	// Triggers when the submit button of survey clicked
 	$('#submitButton').on('click', function (event) {
 		event.preventDefault();
+		// This will validate whether user completed all fields
 		function validateInput() {
 			var isValid = true;
 			$(".form-control").each(function () {
@@ -292,7 +293,7 @@
 			});
 			return isValid;
 		}
-
+		// If passed, store user input into variable
 		if (validateInput()) {
 			var userInput = {
 				name: $('#userName').val().trim(),
@@ -310,7 +311,9 @@
 					$('#question10').val().trim()
 				]
 			};
+			// Then post it to the API list
 			$.post('/api/friends', userInput, function (data) {
+				// And toggle modal on with match info
 				$('#friend-name').text(data.name);
 				$('#friend-image').attr('src', data.img_url);
 				$("#modal-info").modal('toggle');
