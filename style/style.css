@@ -1,0 +1,30 @@
+.best-img {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.best-img, img {
+    margin: 0px;
+    padding: 0px;
+    width:100%;
+}
+
+.jumbotron {
+    margin: 0px;
+}
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: whitesmoke;
+}
+
+a:visited {
+    color: #B1B1B1;
+}
+
+a:hover {
+    color: #8B0B55;
+}

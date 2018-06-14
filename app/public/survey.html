@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Survey | Friend Finder</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../../style/style.css">
+	<link rel="shortcut icon" href="../../style/bff.png" />
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<a class="navbar-brand" href="/">Friend Finder</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+	 aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarText">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="/survey">Survey
+					<span class="sr-only">(current)</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/api/friends">API List</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="https://github.com/barbeyng/Friend-Finder" target="blank">Github</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<br>
+				<br>
+				<h2>First, tell us a little about you.</h2>
+				<hr>
+			</div>
+			<div class="col-6">
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="inputGroup-sizing-default">Name (Required)</span>
+					</div>
+					<input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Enter your name here"
+					 id="userName">
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="inputGroup-sizing-default">Photo (Required)</span>
+					</div>
+					<input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Enter the URL of your photo here"
+					 id="userPhoto">
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-12 text-center">
+			<h2>Now, answer the following questions.</h2>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-12 text-center">
+			<h4>1.</h4>
+			<h5>Breaking the rules give you a thrill.</h5>
+			<select class="selected-answer" id="question1">
+				<option value="" disabled selected>Select your option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-12 text-center">
+			<h4>2.</h4>
+			<h5>Sometimes, you feel blue.</h5>
+			<select class="selected-answer" id="question2">
+				<option value="" disabled selected>Select your option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-12 text-center">
+			<h4>3.</h4>
+			<h5>You love sports.</h5>
+			<select class="selected-answer" id="question3">
+				<option value="" disabled selected>Select your option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-12 text-center">
+			<h4>4.</h4>
+			<h5>Eating healthy is very important to you.</h5>
+			<select class="selected-answer" id="question4">
+				<option value="" disabled selected>Select your option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-12 text-center">
+			<h4>5.</h4>
+			<h5>You're a trend setter.</h5>
+			<select class="selected-answer" id="question5">
+				<option value="" disabled selected>Select your option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-12 text-center">
+			<h4>6.</h4>
+			<h5>You love computers.</h5>
+			<select class="selected-answer" id="question6">
+				<option value="" disabled selected>Select your option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-12 text-center">
+			<h4>7.</h4>
+			<h5>You have many friends.</h5>
+			<select class="selected-answer" id="question7">
+				<option value="" disabled selected>Select your option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-12 text-center">
+			<h4>8.</h4>
+			<h5>You enjoy being outdoors.</h5>
+			<select class="selected-answer" id="question8">
+				<option value="" disabled selected>Select your option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-12 text-center">
+			<h4>9.</h4>
+			<h5>Your idea of a vacation is doing nothing.</h5>
+			<select class="selected-answer" id="question9">
+				<option value="" disabled selected>Select your option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-12 text-center">
+			<h4>10.</h4>
+			<h5>Spaghetti is better than bowtie pasta.</h5>
+			<select class="selected-answer" id="question10">
+				<option value="" disabled selected>Select your option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 text-center">
+			<br>
+			<br>
+			<button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="modal" id="submitButton">Submit</button>
+		</div>
+	</div>
+	<br>
+	<br>
+</body>
+
+<div class="modal fade" id="modal-info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="friend-match">Your Match:</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h2 id="friend-name"></h2>
+				<hr>
+				<img id="friend-image" src="">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<div class="container-fluid text-light bg-dark text-center">
+		<div class="row">
+			<div class="col-12">
+				<p>© 2018 Barbey Ng</p>
+			</div>
+			<div class="col-12">
+				<i class="far fa-address-card"></i>
+				<a href="/api/friends"> API Friends List</a> |
+				<i class="fab fa-github-alt"></i>
+				<a href="https://github.com/barbeyng/Friend-Finder" target="blank">Github Repo</a>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous"></script>
+</footer>
+
+<script type="text/javascript">
+
+	$('#submitButton').on('click', function (event) {
+		event.preventDefault();
+		function validateInput() {
+			var isValid = true;
+			$(".form-control").each(function () {
+				if ($(this).val() === "") {
+					isValid = false;
+				}
+			});
+			$(".selected-answer").each(function () {
+				if ($(this).val() === "") {
+					isValid = false;
+				}
+			});
+			return isValid;
+		}
+
+		if (validateInput()) {
+			var userInput = {
+				name: $('#userName').val().trim(),
+				img_url: $('#userPhoto').val().trim(),
+				scores: [
+					$('#question1').val().trim(),
+					$('#question2').val().trim(),
+					$('#question3').val().trim(),
+					$('#question4').val().trim(),
+					$('#question5').val().trim(),
+					$('#question6').val().trim(),
+					$('#question7').val().trim(),
+					$('#question8').val().trim(),
+					$('#question9').val().trim(),
+					$('#question10').val().trim()
+				]
+			};
+			$.post('/api/friends', userInput, function (data) {
+				$('#friend-name').text(data.name);
+				$('#friend-image').attr('src', data.img_url);
+				$("#modal-info").modal('toggle');
+			});
+		} else {
+			alert('Answers are missing. Please try again.');
+		}
+	}); 
+</script>
+</body>
+
+</html>
